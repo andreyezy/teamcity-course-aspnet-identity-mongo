@@ -10,7 +10,7 @@
 		[Test]
 		public void ToBsonDocument_IdAssigned_MapsToBsonObjectId()
 		{
-			var role = new IdentityRole();
+			var role = new IdentityRole(); //just triggering rebuild in TC
 			role.SetId(ObjectId.GenerateNewId().ToString());
 
 			var document = role.ToBsonDocument();
